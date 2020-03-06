@@ -28,13 +28,7 @@ Keywords:
 + Spring Boot 
 + Spring Security
 + Kotlin
-+ Java 8/11
++ Java 11/8
 + MongoDB
 + JWT
 + Gradle 
-
----
-
-Project is under MIT License agreement
-
----
