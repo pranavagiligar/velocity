@@ -14,7 +14,7 @@ This is an demonstration project for learning _Spring Boot_ with _Kotlin_, _Grad
 **Configurations**
 1. The _`application.properties`_ file contains the line
 `spring.data.mongodb.uri=${MONGO_URL_CON}`
-in which `MONGO_URL_CON` is the MongoDB datebase URL of the MongoDB server which is the system environment variable.
+in which `MONGO_URL_CON` is the MongoDB database URL of the MongoDB server which is the system environment variable.
  
 ---
 
