@@ -1,4 +1,4 @@
-package com.example.config
+package com.velocity.config
 
 import com.mongodb.MongoClientURI
 import org.springframework.beans.factory.annotation.Autowired

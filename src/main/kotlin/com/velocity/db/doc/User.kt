@@ -1,4 +1,4 @@
-package com.example.db.doc
+package com.velocity.db.doc
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.index.Indexed

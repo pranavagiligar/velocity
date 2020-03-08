@@ -1,6 +1,6 @@
-package com.example.db.repo
+package com.velocity.db.repo
 
-import com.example.db.doc.User
+import com.velocity.db.doc.User
 import org.springframework.data.mongodb.repository.MongoRepository
 import org.springframework.stereotype.Repository
 

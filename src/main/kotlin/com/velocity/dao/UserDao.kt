@@ -1,7 +1,7 @@
-package com.example.dao
+package com.velocity.dao
 
-import com.example.db.doc.User
-import com.example.db.repo.UserRepository
+import com.velocity.db.doc.User
+import com.velocity.db.repo.UserRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Repository
 

@@ -1,4 +1,4 @@
-package com.example
+package com.velocity
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -6,8 +6,8 @@ import org.springframework.context.annotation.ComponentScan
 
 @ComponentScan
 @SpringBootApplication
-class DemoApplication
+class VelocityApplication
 
 fun main(args: Array<String>) {
-    runApplication<DemoApplication>(*args)
+    runApplication<VelocityApplication>(*args)
 }

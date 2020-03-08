@@ -1,7 +1,7 @@
-package com.example.service
+package com.velocity.service
 
-import com.example.dao.UserDao
-import com.example.db.doc.User
+import com.velocity.dao.UserDao
+import com.velocity.db.doc.User
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 

@@ -1,10 +1,9 @@
-package com.example.controller
+package com.velocity.controller
 
-import com.example.db.doc.User
+import com.velocity.db.doc.User
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.*
-import com.example.service.UserService
+import com.velocity.service.UserService
 
 @RestController
 class UserController {
