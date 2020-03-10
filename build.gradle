@@ -8,11 +8,21 @@ plugins {
 
 group 'org.velocity'
 version '0.0.1-SNAPSHOT'
+def PROJECT_NAME = "velocity"
 
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+}
+
+// Jar file name format
+static def getBuildName(String libDir, String projectName, String version) {
+    return libDir + File.separator + projectName + "_" + version + "_" + new Date().format('yyMMddHHmm')
+}
+
+jar {
+    setLibsDirName(getBuildName(getLibsDirName(), PROJECT_NAME, project.getVersion().toString()))
 }
 
 dependencies {
