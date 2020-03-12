@@ -1,4 +1,4 @@
-#### Page is under development, for now please find the the [Official documentation](https://docs.atlas.mongodb.com/getting-started/)
+#### Page is under development, for now please find the [Official documentation](https://docs.atlas.mongodb.com/getting-started/)
 
 
 ---

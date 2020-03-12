@@ -2,6 +2,10 @@ This is an demonstration project for learning _Spring Boot_ with _Kotlin_, _Grad
 
 ---
 
+Please refer [Wiki](https://github.com/pranavagiligar/velocity/wiki) or [GithubIO](https://pranavagiligar.github.io/velocity/) for better readablity
+
+---
+
 **Setup**
 1. Install free [IntelliJ IDEA Community Edition](https://www.jetbrains.com/idea/download/#section=mac) and opt for Kotlin in it 
 2. [Clone](https://github.com/pranavagiligar/demospring.git) this repository
