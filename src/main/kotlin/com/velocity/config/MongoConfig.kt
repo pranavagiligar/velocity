@@ -8,7 +8,6 @@ import org.springframework.data.mongodb.MongoDbFactory
 import org.springframework.data.mongodb.core.MongoTemplate
 import org.springframework.data.mongodb.core.SimpleMongoDbFactory
 
-
 class MongoConfig {
     @Autowired
     private lateinit var env: Environment

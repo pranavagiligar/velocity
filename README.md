@@ -1,4 +1,4 @@
-This is an demonstration project for learning _Spring Boot_ with _Kotlin_, _Gradle_ and _MongoDB_ by creating an event management system
+Event management system - This can manage generic events defined by user and communicate this with subscribers
 
 ---
 
@@ -66,12 +66,13 @@ in which `MONGO_URL_CON` is the MongoDB database URL of the MongoDB server which
 + [SpringBoot with MongoDB CRUDs](https://www.devglan.com/spring-boot/spring-boot-mongodb-crud)
 + [SpringBoot demo project using MongoDB](https://github.com/spring-guides/tut-spring-boot-kotlin)
 + [Access MongoDB data](https://spring.io/guides/gs/accessing-data-mongodb/)
++ [SpringBoot with Spring-Security, MongoDB and JWT authentication and authorization](https://bezkoder.com/spring-boot-jwt-auth-mongodb/)
 + [SpringBoot with JWT Authentication using Spring Security](https://auth0.com/blog/implementing-jwt-authentication-on-spring-boot/)
 
 ---
 
 **Keywords**
-+ Spring Boot 
++ Spring Boot 2.2.4
 + Spring Security
 + Kotlin
 + Java 8/11

@@ -19,9 +19,9 @@ class ServerStatusController {
    <head>
       <title> Velocity </title>
       <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-      <meta name="author" content="Copyright2000 Patricia J. Asher">
-      <meta name="keywords" content="HTML,XHTML,tutorial">
-      <meta name="description" content="HTML vs XHTML, part of a brief tutorial on the basics of writing HTML.">
+      <meta name="author" content="Copyright 2020 Pranava G R">
+      <meta name="keywords" content="Server-Eventrace">
+      <meta name="description" content="Eventrace portal">
    </head>
    <body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
       <h1 align="center"> Welcome to Velocity System Info </h1>

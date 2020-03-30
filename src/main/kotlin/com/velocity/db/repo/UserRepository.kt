@@ -3,15 +3,16 @@ package com.velocity.db.repo
 import com.velocity.db.doc.User
 import org.springframework.data.mongodb.repository.MongoRepository
 import org.springframework.stereotype.Repository
+import java.util.*
 
 @Repository
 interface  UserRepository: MongoRepository<User, String> {
 
-    fun findUserByAuthority(authority: String): List<User>
+    fun findByUsername(username: String): Optional<User>
 
-    fun findUserById(id: String): User
+    fun existsByUsername(username: String): Boolean
 
-    fun findUserByUsername(username: String): User?
+//    fun removeUserByUsername(username: String): Long
 
-    fun removeUserByUsername(username: String): Long
+    fun existsByEmail(email: String): Boolean
 }

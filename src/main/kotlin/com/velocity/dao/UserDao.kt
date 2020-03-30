@@ -11,13 +11,14 @@ class UserDao {
     @Autowired
     lateinit var userRepository: UserRepository
 
-    fun findUserByUsername(username: String): User? = userRepository.findUserByUsername(username)
+    fun findUserByUsername(username: String): User? = userRepository.findByUsername(username).orElse(null)
     fun deleteUserByUsername(username: String): User? {
-        val user = userRepository.findUserByUsername(username)
-        user?.let {
-            userRepository.removeUserByUsername(username)
-            return user
-        } ?: return null
+//        val user = userRepository.findByUsername(username).orElse(null)
+//        user?.let {
+//            userRepository.removeUserByUsername(username)
+//            return user
+//        } ?: return null
+        return null
     }
 
     fun save(user: User): User {
