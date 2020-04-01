@@ -3,6 +3,9 @@ package com.velocity.security.jwt
 import com.velocity.security.service.UserDetailsServiceImpl
 import mu.KotlinLogging
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
+import org.springframework.security.core.context.SecurityContextHolder
+import org.springframework.security.web.authentication.WebAuthenticationDetailsSource
 import org.springframework.util.StringUtils
 import org.springframework.web.filter.OncePerRequestFilter
 import javax.servlet.FilterChain
@@ -22,7 +25,15 @@ class AuthTokenFilter: OncePerRequestFilter() {
         filterChain: FilterChain
     ) {
         try {
-
+            val jwt = parseJwt(request)
+            if(jwt != null && jwtUtils.validateJwtToken(jwt)) {
+                val username = jwtUtils.getUsernameFromJwtToken(jwt)
+                val userDetails = userDetailsServiceImpl.loadUserByUsername(username)
+                val authentication = UsernamePasswordAuthenticationToken(
+                    userDetails, null, userDetails.authorities)
+                authentication.details = WebAuthenticationDetailsSource().buildDetails(request)
+                SecurityContextHolder.getContext().authentication = authentication
+            }
         } catch (e: Exception) {
             logger.error("Cannot set user authentication: ${e.message}")
         }

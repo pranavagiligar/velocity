@@ -12,7 +12,7 @@ interface  UserRepository: MongoRepository<User, String> {
 
     fun existsByUsername(username: String): Boolean
 
-//    fun removeUserByUsername(username: String): Long
+    fun removeUserByUsername(username: String): Long
 
     fun existsByEmail(email: String): Boolean
 }

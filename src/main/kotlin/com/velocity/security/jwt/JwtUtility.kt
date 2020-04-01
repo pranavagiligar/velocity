@@ -37,7 +37,7 @@ class JwtUtility {
     fun validateJwtToken(authToken: String): Boolean {
         try {
             val jwsClaim = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(authToken)
-            if(jwsClaim.body.expiration.time > Date().time) {
+            if(jwsClaim.body.expiration.time < Date().time) {
 //                TODO: if it is false then send custom object with expiration is true
                 logger.info("JWT") { "Session expired: ${jwsClaim.body.subject}"; }
                 return false

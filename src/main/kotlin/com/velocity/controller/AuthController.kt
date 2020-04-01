@@ -32,7 +32,7 @@ class AuthController {
     @Autowired lateinit var passwordEncoder: PasswordEncoder
     @Autowired lateinit var jwtUtility: JwtUtility
 
-    @PostMapping("signin")
+    @PostMapping("/signin")
     fun authenticateUser(@Valid @RequestBody loginRequest: LoginRequest): ResponseEntity<Any>{
         val authentication = authenticationManager.authenticate(
             UsernamePasswordAuthenticationToken(loginRequest.username, loginRequest.password)
@@ -41,7 +41,7 @@ class AuthController {
         SecurityContextHolder.getContext().authentication = authentication
         val jwt = jwtUtility.generateJwtToken(authentication)
 
-        val userDetails = authentication.details as UserDetailsImpl
+        val userDetails = authentication.principal as UserDetailsImpl
         val roles = userDetails.authorities.stream().map {
             item -> item.authority
         }.collect(Collectors.toList())
@@ -75,14 +75,14 @@ class AuthController {
                 eRoles.forEach { role ->
                     when(role) {
                         ERole.ROLE_ADMIN -> {
-                            val adminRole = roleRepository.findByName(ERole.ROLE_USER)
+                            val adminRole = roleRepository.findByName(ERole.ROLE_ADMIN)
                                 .orElseThrow {
                                     RuntimeException("Error: Role not found")
                                 }
                             roles.add(adminRole)
                         }
                         ERole.ROLE_MODERATOR -> {
-                            val modRole = roleRepository.findByName(ERole.ROLE_USER)
+                            val modRole = roleRepository.findByName(ERole.ROLE_MODERATOR)
                                 .orElseThrow {
                                     RuntimeException("Error: Role not found")
                                 }
