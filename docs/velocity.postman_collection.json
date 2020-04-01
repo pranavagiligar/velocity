@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "35e26cd2-c804-43ea-882f-f0baf92eebf0",
+		"name": "velocity",
+		"description": "SpringBoot app API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"pranava\",\n\t\"password\": \"hello1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:80/api/auth/signin",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				},
+				"description": "User creating, deleting and obtaining APIs"
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fullname\": \"Pranava GR\",\n\t\"username\": \"pranava\",\n\t\"email\": \"grpranava@gmail.com\",\n\t\"password\": \"test\",\n\t\"roles\": [\n\t\t\t\"ROLE_USER\",\n\t\t\t\"ROLE_ADMIN\"\n\t\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:80/api/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-info",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhdmFuYXJwIiwiaWF0IjoxNTg1NzYwODk0LCJleHAiOjE1ODU4NDcyOTR9.fBV0UvvINNAU4pItE36LG69JM71IxLBdAIkwYANHzyjWh8HT0NK9OLB56mtgzHWMYp27V04KxhQsu3eCBu3uuQ",
+						"description": "JWT authentication token",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:80/api/user/avanarp",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api",
+						"user",
+						"avanarp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "server-info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/server/info",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"server",
+						"info"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

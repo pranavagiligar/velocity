@@ -71,6 +71,8 @@ in which `MONGO_URL_CON` is the MongoDB database URL of the MongoDB server which
 
 4. The port number of the server can be configured in _`application.properties`_ file. Default port number is port `80`
 
+5. Postman collection 2.1 can be found in `velocity/docs/velocity.postman_collection.json`
+
 ---
 
 **Project structure**
