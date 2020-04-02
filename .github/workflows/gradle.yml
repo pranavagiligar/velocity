@@ -21,10 +21,13 @@ jobs:
       with:
         java-version: 1.8
     - name: Set up Kotlin
-      id: update
       run: |
         curl -s https://get.sdkman.io | bash
-        sdk install kotlin
+    - name: Set up SDKMAN
+      id: update
+      run: |
+         source "/home/runner/.sdkman/bin/sdkman-init.sh"
+         sdk install kotlin
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
