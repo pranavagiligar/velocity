@@ -22,7 +22,7 @@ jobs:
         java-version: 1.8
     - name: Set up Kotlin
       id: update
-      run: snap install --classic kotlin
+      run: sudo snap install --classic kotlin
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
