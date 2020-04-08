@@ -48,7 +48,15 @@ class WebSecurityConfig: WebSecurityConfigurerAdapter() {
         http.cors().and().csrf().disable()
             .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
             .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-            .authorizeRequests().antMatchers("/auth/**", "/server/info").permitAll()
+            .authorizeRequests().antMatchers("/auth/**", "/server/info"
+                ,"/v2/api-docs",
+                "/swagger-ui.html",
+                "spring-security-rest/api/swagger-ui.html",
+                "/configuration/ui",
+                "/swagger-resources/**",
+                "/configuration/security",
+                "/webjars/**"
+            ).permitAll()
             .antMatchers("/user/**").permitAll()
             .anyRequest().authenticated()
 

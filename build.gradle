@@ -34,6 +34,7 @@ dependencies {
     def slf4jVersion = "1.7.25"
     def loggingVersion = "1.7.9"
     def xmlBindVersion = "2.3.0"
+    def swaggerVersion = "2.9.2"
 
     implementation "org.springframework.boot:spring-boot-starter-web"
     implementation("org.springframework.boot:spring-boot-starter-security")
@@ -43,6 +44,9 @@ dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-reflect"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+
+    implementation "io.springfox:springfox-swagger2:$swaggerVersion"
+    implementation "io.springfox:springfox-swagger-ui:$swaggerVersion"
 
 //    implementation "com.auth0:java-jwt:$jwtVersion"
     implementation "io.jsonwebtoken:jjwt:$jwtVersion"
