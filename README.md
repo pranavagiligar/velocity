@@ -1,3 +1,5 @@
+![velocity-CI](https://github.com/pranavagiligar/velocity/workflows/velocity-CI/badge.svg)
+
 Event management system - This can manage generic events defined by user and communicate this with subscribers
 
 ---
